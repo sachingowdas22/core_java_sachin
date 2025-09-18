@@ -1,20 +1,54 @@
-package typecasting;
+package org.tnsif.sf.tnsif.exceptiondemo;
 
-public class typecasting {
-	
-	public static void main(string[] args) {
-		
-		int quantity=3;
-		double priceperitem=99.50;
-		double totalprice=quantity*priceperitem
-				
-		double discount=10.75;
-		int roundedDiscount=(int)discount;
-		
-		System.out.println("online shopping summary");
-		System.out.println("final amount=+final amouunt")
-		
-				
-				
+import java.io.IOException;
+
+public class ThrowsExceptionDemo {
+//hema
+	void printing() //no exception
+	{
+		System.out.println("Printing java");
 	}
+	//prajwal
+	void scanning() throws IOException
+	{
+		System.out.println("Device error");
+	}
+	//gagan
+	void verification() throws ArithmeticException ,IOException,ClassNotFoundException
+	{
+		System.out.println("technical error");
+	}
+	
+	
+	public static void main(String[] args) {
+		ThrowsExceptionDemo obj=new ThrowsExceptionDemo();
+		
+		obj.printing();
+		try
+		{
+			obj.scanning();
+		}
+		catch(IOException e)
+		{
+			System.out.println(e);
+		}
+		try
+		{
+			obj.verification();
+		}
+		catch(ArithmeticException e)
+		{
+			System.out.println(e);
+		}
+		catch(IOException e)
+		{
+			System.out.println(e);
+		}
+		catch(ClassNotFoundException e)
+		{
+			System.out.println(e);
+		}
+		
+	}
+
 }
